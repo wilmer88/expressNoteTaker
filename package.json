@@ -4,11 +4,25 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
-  }
+    "express": "^4.16.4",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "path-posix": "^1.0.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilmer88/expressNoteTaker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wilmer88/expressNoteTaker/issues"
+  },
+  "homepage": "https://github.com/wilmer88/expressNoteTaker#readme"
 }
