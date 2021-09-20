@@ -1,11 +1,11 @@
 const express = require("express");
-// const path = require("path");
+const path = require("path-posix");
 const app = express();
 const uui = require("uuid");
 
 const fs = require("fs");
 const database = require("./db/db.json");
-var { __dirname } = require("path/posix");
+// var { __dirname } = require("path/posix");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
