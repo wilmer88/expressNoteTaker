@@ -1,7 +1,7 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
+  "description": "noty is a georgia tech assignment given by Georgia Tech BootCamp.\r The basic functionalty of the app is should allow the user to make and save todos\r for easy reminder",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -26,5 +26,6 @@
   "bugs": {
     "url": "https://github.com/wilmer88/expressNoteTaker/issues"
   },
-  "homepage": "https://github.com/wilmer88/expressNoteTaker#readme"
+  "homepage": "https://github.com/wilmer88/expressNoteTaker#readme",
+  "keywords": []
 }

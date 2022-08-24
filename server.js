@@ -6,8 +6,6 @@ var bodyParser = require("body-parser");
 const fs = require("fs");
 let database = require("./db/db.json");
 const { json } = require("body-parser");
-// const { resolve } = require("path/posix");
-// const { rejects } = require("assert");
 path.resolve(__dirname, "/db/db.json");
 const router = require("express").Router();
 
@@ -24,22 +22,7 @@ app.get("/api/notes", function (req, res) {
   res.json(database);
 });
 
-// app.get("/api/notes/:id", (req, res) => {
-//   const foundNote = database.some((note) => note.id === parseInt(req.params.id));
-//   if (foundNote) {
-//     res.json(database.filter((note) => note.id !== parseInt(req.perams.id)));
-//   } else {
-//     res.json({
-//       message: "sorry wilmer somthig went wrong",
-//     });
-//   }
-// });
-
 app.post("/api/notes", function (req, res) {
-  // function guardaNota(nota) {
-  //   return new Promise((resolve, rejects) => {
-  //     json.push({ nota });
-
   let newNote = {
     id: uui.v1(),
     title: req.body.title,
@@ -67,21 +50,6 @@ app.delete("/api/notes/:id", (req, res) => {
   }
 });
 
-// app.delete("/api/noted/:id", (req, res) => {
-//   const foundNote = database.some((noty) => noty.id === parseInt(req.params.id));
-
-//   if (foundNote) {
-
-//  var esto= database.filter(function(note){ note.id === parseInt(req.perams.id)} )
-
-//     res.json(esto);
-//   } else {
-//     res.json({
-//       message: "sorry wilmer somthig went wrong",
-//     });
-//   }
-// });
-
 app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./public/index.html"));
 });
@@ -92,9 +60,4 @@ app.listen(PORT, function () {
   console.log(`app is listening on port: ${PORT}`);
 });
 
-function removeNote(id) {
-  // Get all notes, remove the note with the given id, write the filtered notes
-  return this.getNotes()
-    .then((notes) => notes.filter((note) => note.id !== id))
-    .then((filteredNotes) => this.write(filteredNotes));
-}
+
